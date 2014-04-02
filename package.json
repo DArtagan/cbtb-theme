@@ -1,0 +1,22 @@
+{
+  "name": "clyde",
+  "version": "1.1.0",
+  "description": "Theme for Compassion by the Book",
+  "main": "index.js",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.2.2",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-bower-requirejs": "~0.4.1",
+    "grunt-contrib-requirejs": "~0.4.0",
+    "bower": "~0.8.6",
+    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-svgmin": "~0.1.0",
+    "grunt-contrib-watch": "~0.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
