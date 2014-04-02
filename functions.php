@@ -481,3 +481,13 @@ function twentyten_posted_in() {
 	);
 }
 endif;
+
+// The class names are switched here, it's cause WordPress is weird on what it considers next and prev
+function posts_link_attributes_prev() {
+  return 'class="next"';
+}
+function posts_link_attributes_next() {
+  return 'class="prev"';
+}
+add_filter('next_posts_link_attributes', 'posts_link_attributes_next');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes_prev');
