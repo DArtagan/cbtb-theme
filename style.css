@@ -577,6 +577,9 @@ div#content.posts {
 #content ol.archive li.search .meta {
 	line-height: 100%;
 }
+#sidebar #searchform input#s {
+    width: 112px;
+}
 #content ol.archive .entry-title {
 
 	line-height: 100%;
