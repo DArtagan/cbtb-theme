@@ -11,7 +11,7 @@ get_header(); ?>
         <h1 class="entry-title">Blog</h1>
         <?php 
           $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-          $the_query = new WP_Query( 'paged=' . $paged ); 
+          $the_query = new WP_Query( array('paged' => $paged, 'post_type' => 'post' ) );
         ?>
         <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 		      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -19,6 +19,7 @@ get_header(); ?>
             <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
             <?php the_excerpt(); ?>
           </div>
+          <?php endwhile; ?>
           <div class="pagination">
             <?php
               previous_posts_link( 'Newer →' );
@@ -26,8 +27,8 @@ get_header(); ?>
               wp_reset_postdata(); 
             ?>
           </div>
-        <?php endwhile; else: ?>
-          <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        <?php else: ?>
+            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
         <?php endif; ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
