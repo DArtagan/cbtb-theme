@@ -14,10 +14,12 @@
 
 get_header(); ?>
 
+<div id="inner_page">
+	<div id="inside_inner_page">
 		<div id="container">
-			<div id="content" role="main">
-
-<?php
+      <?php get_sidebar(); ?>
+			<div id="content" role="main" class="posts">
+      <?php
 	/* Queue the first post, that way we know
 	 * what date we're dealing with (if that is the case).
 	 *
@@ -53,9 +55,9 @@ get_header(); ?>
 	 */
 	 get_template_part( 'loop', 'archive' );
 ?>
-
 			</div><!-- #content -->
 		</div><!-- #container -->
-
-<?php get_sidebar(); ?>
+	</div><!-- #inside_inner_page -->  
+</div><!-- #inner_page -->
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
