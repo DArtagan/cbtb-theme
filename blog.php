@@ -16,8 +16,8 @@ get_header(); ?>
           </div><!-- #nav-above -->
         <?php endif; ?>
 
-        <?php query_posts(); ?>
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php $the_query = new WP_Query( "posts_per_page=10" ); ?>
+        <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 		      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
             <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
