@@ -7,7 +7,8 @@ get_header(); ?>
 <div id="inner_page">
 	<div id="inside_inner_page">
 		<div id="container">
-			<div id="content" role="main">
+      <?php get_sidebar(); ?>
+			<div id="content" role="main" class="posts">
         <h1 class="entry-title">Blog</h1>
         <?php 
           $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;

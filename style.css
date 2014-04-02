@@ -384,6 +384,11 @@ background: -moz-linear-gradient(
 
 }
 
+div#content.posts {
+    margin: 20px;
+    width: 650px; 
+}
+
 #content .entry-content h1, #content .entry-content h2, #content .entry-content h3, #content .entry-content h4 {
 	margin: 20px 0 10px;
 	padding: 0;
@@ -581,7 +586,9 @@ background: -moz-linear-gradient(
 	margin-bottom: 0;
 }
 #sidebar {
-
+  float: right;
+  margin: 20px 20px 20px 0px;
+  width: 210px;
 }
 #sidebar h2 {
 	font-size: 18px;

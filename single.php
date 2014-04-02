@@ -11,7 +11,8 @@ get_header(); ?>
 <div id="inner_page">
 	<div id="inside_inner_page">
 		<div id="container">
-			<div id="content" role="main">
+      <?php get_sidebar(); ?>
+			<div id="content" role="main" class="posts">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
