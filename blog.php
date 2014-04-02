@@ -16,16 +16,16 @@ get_header(); ?>
           </div><!-- #nav-above -->
         <?php endif; ?>
 
-        <?php query_posts( array('cat' => 1, 'showposts' => 1) ); ?>
-          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <div class="post">
-              <h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-              <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
-              <?php the_excerpt(); ?>
-            </div>
-            <?php endwhile; else: ?>
-              <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-          <?php endif; ?>
+        <?php query_posts(); ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+            <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+            <?php the_excerpt(); ?>
+          </div>
+        <?php endwhile; else: ?>
+          <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+        <?php endif; ?>
         <?php wp_reset_query(); ?>
 
         <?php if (  $wp_query->max_num_pages > 1 ) : ?>
