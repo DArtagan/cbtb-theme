@@ -1,30 +1,13 @@
-<?php
-/**
- * The template for displaying 404 pages (Not Found).
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
- */
+<?php get_template_part('templates/page', 'header'); ?>
 
-get_header(); ?>
+<div class="alert alert-warning">
+  <?php _e('Sorry, but the page you were trying to view does not exist.', 'roots'); ?>
+</div>
 
-	<div id="container">
-		<div id="content" role="main">
+<p><?php _e('It looks like this was the result of either:', 'roots'); ?></p>
+<ul>
+  <li><?php _e('a mistyped address', 'roots'); ?></li>
+  <li><?php _e('an out-of-date link', 'roots'); ?></li>
+</ul>
 
-			<div id="post-0" class="post error404 not-found">
-				<h1 class="entry-title"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
-				<div class="entry-content">
-					<p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', 'twentyten' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .entry-content -->
-			</div><!-- #post-0 -->
-
-		</div><!-- #content -->
-	</div><!-- #container -->
-	<script type="text/javascript">
-		// focus on search field after it has loaded
-		document.getElementById('s') && document.getElementById('s').focus();
-	</script>
-
-<?php get_footer(); ?>
+<?php get_search_form(); ?>
