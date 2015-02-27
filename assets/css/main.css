@@ -6882,6 +6882,16 @@ figure.alignnone {
   }
 }
 
+.banner a.navbar-brand {
+  background: url("../img/logo.png") no-repeat;
+  background-position: center center;
+  -webkit-background-size: 150px 50px;
+          background-size: 150px 50px;
+  display: block;
+  overflow: hidden;
+  text-indent: -99999em;
+}
+
 .sidebar {
   position: relative;
   min-height: 1px;
