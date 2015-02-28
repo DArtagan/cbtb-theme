@@ -1,6 +1,11 @@
 @import "main";
 
 body {
+    font-family: pt_sansregular;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: .02em;
+    line-height: 160%;
     margin: 12px !important;
 
     img {
