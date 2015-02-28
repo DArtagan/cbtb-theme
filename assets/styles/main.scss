@@ -11,15 +11,88 @@
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import "common/_variables";
-@import "common/_global";
-@import "components/_buttons";
-@import "components/_comments";
-@import "components/_forms";
-@import "components/_grid";
-@import "components/_wp-classes";
-@import "layouts/_header";
-@import "layouts/_sidebar";
-@import "layouts/_footer";
-@import "layouts/_pages";
-@import "layouts/_posts";
+/*** General ***/
+body {
+    font-family: pt_sansregular;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: .02em;
+    line-height: 160%;
+}
+
+/*** Header ***/
+.banner {
+    background: #ffffff;
+    border-bottom: 0px;
+    font-family: ubuntu_titlingbold;
+    font-size: 1.25em;
+
+    a.navbar-brand { 
+        background: url("../images/logo.png") #ffffff no-repeat;
+        background-position: center center;
+        background-size: 250px;
+        display: block;
+        height: 100px;
+        text-indent: -99999em;
+        width: 250px;
+    }
+
+    nav {
+        float: right;
+        margin-top: 25px;
+
+        li.active a {
+            background-color: #f5f5f5 !important;
+        }
+    }
+}
+
+/*** Main ***/
+.wrap {
+    .main {
+        @include make-md-column(9);
+
+        img {
+            padding: 20px 0px;
+        }
+    }
+    .sidebar {
+        @include make-md-column(3);
+    }
+
+}
+
+/*** Footer ***/
+
+/*** Page Specific ***/
+// Home
+body.home {
+    .page-header {
+        display: none;
+    }
+}
+
+/*** Fonts ***/
+@font-face {
+    font-family: 'ubuntu_titlingbold';
+    src: url('../fonts/UbuntuTitling-Bold-webfont.eot');
+    src: url('../fonts/UbuntuTitling-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/UbuntuTitling-Bold-webfont.woff') format('woff'),
+         url('../fonts/UbuntuTitling-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/UbuntuTitling-Bold-webfont.svg#ubuntu_titlingbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('../fonts/PT_Sans-Web-Regular-webfont.eot');
+    src: url('../fonts/PT_Sans-Web-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PT_Sans-Web-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/PT_Sans-Web-Regular-webfont.woff') format('woff'),
+         url('../fonts/PT_Sans-Web-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/PT_Sans-Web-Regular-webfont.svg#pt_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
