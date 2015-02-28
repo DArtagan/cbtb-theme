@@ -52,6 +52,23 @@ body {
     .main {
         @include make-md-column(9);
 
+        h2 {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding-top: 25px;
+        }
+
+        h3 {
+            font-size: 1.1em;
+            font-style: italic;
+            padding-top: 15px;
+        }
+
+        h2 + h3 {
+            padding-top: 5px;
+            margin-top: 5px;
+        }
+
         img {
             padding: 20px 0px;
         }
@@ -82,7 +99,6 @@ body.home {
          url('../fonts/UbuntuTitling-Bold-webfont.svg#ubuntu_titlingbold') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
