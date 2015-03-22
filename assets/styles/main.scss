@@ -81,6 +81,10 @@ body {
     }
     .sidebar {
         @include make-md-column(3);
+
+        #mc_embed_signup form {
+            padding: 0px;
+        }
     }
 
 }
