@@ -79,8 +79,13 @@ body {
             padding: 20px 0px;
         }
     }
+
     .sidebar {
         @include make-md-column(3);
+
+        section.widget {
+            margin: 20px 0px;
+        }
 
         #mc_embed_signup form {
             padding: 0px;
